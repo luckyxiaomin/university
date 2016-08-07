@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图书馆</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/second.css" />
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/holder.min.js"></script>
+    <script>
+        //js实现无缝滚动
+        window.onload=function() {
+            var oBox = document.getElementById('box');
+            var aUl = oBox.getElementsByTagName('ul')[0];
+            var aImg = oBox.getElementsByTagName('li');
+            var timer = null;
+            aUl.innerHTML = aUl.innerHTML + aUl.innerHTML;
+            aUl.style.width = aImg[0].offsetWidth * aImg.length + 'px';
+//向左走
+            function scrol(){
+                timer = setInterval(function () {
+                    if (aUl.offsetLeft > -(aUl.offsetWidth / 2)) {
+                        aUl.style.left = aUl.offsetLeft - 2 + 'px';
+                    }
+                    else {
+                        aUl.style.left = '0px';
+                    }
+                }, 30);
+            }
+            scrol();
+            aUl.onmouseover=function()
+            {
+                clearInterval(timer);
+            };
+            aUl.onmouseout=function()
+            {
+                scrol();
+            };
+        };
+
+//        jquery实现无缝滚动；
+//        var speed=30;
+//        var content=$("#scrol").html();
+//        var timer=null;
+//        var widthC=$("#scrol").width();
+//        $("#scrol").width(widthC*2);
+//        $("#scrol").html(content+content);
+//        function toScroll(){
+//            if($("#scrol").scrollLeft()<=widthC)
+//                $("#scrol").scrollLeft( $("#scrol").scrollLeft()+5);
+//            else
+//            {
+//                $("#scrol").scrollLeft(0);
+//            }
+//        }
+//
+//                $(function(){
+//                  var sliding=setInterval(toScroll,speed);
+//                    $("#scrol").hover(function(){
+//                        clearInterval(sliding);
+//                    },function(){
+//                        sliding=setInterval(toScroll,speed);
+//                    });
+//
+//             });
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="container">
+        <!--顶部-->
+        <div class="row">
+            <div class="col-md-12 clearPadding">
+                <img src="images/dec_02.jpg" style="width: 100%;">
+            </div>
+        </div>
+        <!--导航栏-->
+        <div class="row"  style="background: rgb(145,42,0);margin-bottom: 15px;">
+            <div class="col-md-12">
+                <ul class="list-unstyled setNav">
+                    <li style="margin-left: 15px;"><a href="homepage.html" target="_blank">首页</a></li>
+                    <li><a href="#">图书馆指南</a></li>
+                    <li><a href="#">图书馆制度</a></li>
+                    <li><a href="#">图书馆公告</a></li>
+                    <li><a href="#">馆办刊物</a></li>
+                    <li><a href="#">自检特色数据库</a></li>
+                    <li><a href="#">新书通告</a></li>
+                    <li><a href="#">读者服务</a></li>
+                    <li><a href="#">论文提交</a></li>
+                    <li><a href="#">图书馆检索</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--主体部分-->
+        <div class="row">
+            <!--新闻轮播-->
+            <div class="col-md-5">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active">1</li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1">2</li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2">3</li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3">4</li>
+                    </ol>
+                    <!--wrapper for slides-->
+                    <div class="carousel-inner " role="listbox">
+                        <div class="item active">
+                            <img src="images/1.jpg" style="height:216px;width:100%">
+                        </div>
+                        <div class="item">
+                            <img src="images/2.jpg" style="height:216px;width:100%">
+                        </div>
+                        <div class="item">
+                            <img src="images/3.jpg" style="height:216px;width:100%">
+                        </div>
+                        <div class="item">
+                            <img src="images/4.jpg" style="height:216px;width:100%">
+                        </div>
+                    </div>
+            </div>
+                </div>
+            <div class="col-md-6 main-right" style="border: 1px solid rgb(237,237,237);">
+                <ul class="list-unstyled btn-group">
+                    <li class="btn btn-default active" data-toggle="tab" data-target="#tab1">通知公告</li>
+                    <li class="btn btn-default" style="margin-left: 15px;" data-toggle="tab" data-target="#tab2">资源动态</li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <div class="row">
+                            <div class="col-md-9 setLi">
+                                <ul style="list-style-image: url('images/tip_03.jpg');">
+                                    <li><a href="#" rel="tooltip" title="图书馆暑假开放通知">图书馆暑假开放通知</a></li>
+                                    <li><a href="#" rel="tooltip" title="图书馆赴三院校调研">图书馆赴三院校调研</a></li>
+                                    <li><a href="#" rel="tooltip" title="我院“世界读书日”活动月圆满结束">我院“世界读书日”活动月圆满结束</a></li>
+                                    <li><a href="#" rel="tooltip" title="西安音乐学院“世界读书日”活动月活动内容安排">西安音乐学院“世界读书日”活动月...</a></li>
+                                    <li><a href="#" rel="tooltip" title="图书馆寒假放假通知">图书馆寒假放假通知</a></li>
+                                    <li><a href="#" rel="tooltip" title="通知">通知</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 setLi"  style="margin-left: -30px;">
+                                <ul class="list-unstyled">
+                                    <li>2016-07-13</li>
+                                    <li>2016-06-21</li>
+                                    <li>2016-05-25</li>
+                                    <li>2016-04-18</li>
+                                    <li>2016-01-14</li>
+                                    <li>2016-01-14</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11">
+                               <strong><small><a href="#" style="color:rgb(164,85,53);margin-bottom: 10px;" class="pull-right">更多》</a></small> </strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab2">
+                        <div class="row">
+                            <div class="col-md-9 setLi">
+                                <ul style="list-style-image: url('images/tip_03.jpg');">
+                                    <li><a href="#" rel="tooltip" title="知网、库克数据库用户名、密码">知网、库克数据库用户名、密码</a></li>
+                                    <li><a href="#" rel="tooltip" title="《人大报刊系列数据库》试用通知">《人大报刊系列数据库》试用通知</a></li>
+                                    <li><a href="#" rel="tooltip" title="《中国共产党思想理论资源数据库》试用通知">《中国共产党思想理论资源数据库》...</a></li>
+                                    <li><a href="#" rel="tooltip" title="《3E英语多媒体资源库》试用通知">《3E英语多媒体资源库》试用通知</a></li>
+                                    <li><a href="#" rel="tooltip" title="“ASP世界音乐在线数据库”试用通知">“ASP世界音乐在线数据库”试用通知</a></li>
+                                    <li><a href="#" rel="tooltip" title="”库克影院“试用通知">”库克影院“试用通知</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 setLi" style="margin-left: -30px;">
+                                <ul class="list-unstyled">
+                                    <li>2014-07-09</li>
+                                    <li>2016-04-21</li>
+                                    <li>2016-04-18</li>
+                                    <li>2016-04-18</li>
+                                    <li>2015-09-23</li>
+                                    <li>2015-09-18</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11">
+                                <strong> <a href="#" style="color:rgb(164,85,53);margin-bottom: 10px;" class="pull-right">更多》</a></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 26px;">
+            <div class="col-md-2 col-md-offset-1 countBag">
+            <ul class="list-unstyled">
+                <li style="font-size: 14px;color:rgb(174,52,4);font-weight: bold;">自建数据库<small><a href="#" style="color:rgb(174,52,4);float:right;">更多...</a></small></li>
+                <li><a href="#" rel="tooltip" title="西安鼓乐数据库">西安鼓乐数据库</a></li>
+                <li><a href="#" rel="tooltip" title="馆藏声乐曲目数据库">馆藏声乐曲目数据库</a></li>
+                <li><a href="#" rel="tooltip" title="赵季平音乐数据库">赵季平音乐数据库</a></li>
+                <li><a href="#" rel="tooltip" title="学位论文数据库">学位论文数据库</a></li>
+                <li><a href="#" rel="tooltip" title="陕北民歌数据库">陕北民歌数据库</a></li>
+            </ul>
+            </div>
+            <div class="col-md-2 countBag">
+                <ul class="list-unstyled">
+                    <li style="font-size: 14px;color:rgb(174,52,4);font-weight: bold;">中文数据库<small><a href="#" style="color:rgb(174,52,4);float:right;">更多...</a></small></li>
+                    <li><a href="#" rel="tooltip" title="库克音乐资源库">库克音乐资源库</a></li>
+                    <li><a href="#" rel="tooltip" title="中国知网">中国知网</a></li>
+                    <li><a href="#" rel="tooltip" title="读秀中文学术搜索(超星数字图书馆)">读秀中文学术搜索...</a></li>
+                    <li><a href="#" rel="tooltip" title="超星学术视频">超星学术视频</a></li>
+                    <li><a href="#" rel="tooltip" title="万方数据库">万方数据库</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 countBag">
+                <ul class="list-unstyled">
+                    <li style="font-size: 14px;color:rgb(174,52,4);font-weight: bold;">外文数据库<small><a href="#" style="color:rgb(174,52,4);float:right;">更多...</a></small></li>
+                    <li><a href="#" rel="tooltip" title="美国科研出版社(Scientific Research Pulishing)期刊">美国科研出版社（S...</a></li>
+                    <li><a href="#" rel="tooltip" title="ASP表演艺术、戏剧与电影视频库">ASP表演艺术、戏剧...</a></li>
+                    <li><a href="#" rel="tooltip" title="不列颠百科全书">不列颠百科全书</a></li>
+                    <li><a href="#" rel="tooltip" title="EBSCO音乐库">EBSCO音乐库</a></li>
+                    <li><a href="#" rel="tooltip" title="ASP世界音乐在线">ASP世界音乐在线</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 countBag">
+                <ul class="list-unstyled">
+                    <li style="font-size: 14px;color:rgb(174,52,4);font-weight: bold;">试用数据库<small><a href="#" style="color:rgb(174,52,4);float:right;">更多...</a></small></li>
+                    <li><a href="#" rel="tooltip" title="《3E英语多媒体资源库》">《3E英语多媒体资...</a></li>
+                    <li><a href="#" rel="tooltip" title="《中国共产党思想资源数据库》">《中国共产党思想...</a></li>
+                    <li><a href="#" rel="tooltip" title="知识视界视频图书馆">知识视界视频图书馆</a></li>
+                    <li><a href="#" rel="tooltip" title="牛津格罗夫音乐数据库">牛津格罗夫音乐数据库</a></li>
+                    <li><a href="#" rel="tooltip" title="牛津格罗夫艺术在线数据库">牛津格罗夫艺术在...</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 countBag">
+                <ul class="list-unstyled">
+                    <li style="font-size: 14px;color:rgb(174,52,4);font-weight: bold;">馆藏信息<small><a href="#" style="color:rgb(174,52,4);float:right;">更多...</a></small></li>
+                    <li><a href="#" rel="tooltip" title="2015年新增书目">2015年...</a></li>
+                    <li><a href="#" rel="tooltip" title="2014年新书目录">2014年...</a></li>
+                    <li><a href="#" rel="tooltip" title="2014年最新音像目录">2014年...</a></li>
+                    <li><a href="#" rel="tooltip" title="2013年最新音像目录">2013年...</a></li>
+                    <li><a href="#" rel="tooltip" title="最新书目">最新书目</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="border-bottom: 3px solid rgb(220,188,175)">
+            <div class="col-md-2 col-md-offset-5">
+                <button class="btn btn-default btn-block dec" data-target="">友情链接:</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="height:71px;overflow: hidden;" id="box">
+                <ul class="list-unstyled" id="scrol">
+                    <li><a href="#"><img src="images/1.gif"></a></li>
+                    <li><a href="#"><img src="images/2.gif"></a></li>
+                    <li><a href="#"><img src="images/3.gif"></a></li>
+                    <li><a href="#"><img src="images/4.gif"></a></li>
+                    <li><a href="#"><img src="images/5.gif"></a></li>
+                    <li><a href="#"><img src="images/6.gif"></a></li>
+                    <li><a href="#"><img src="images/7.gif"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 bt" style="background:rgb(135,39,0);padding:40px 190px;color:#fff;">
+           <small> <span>西安音乐学院图书馆专题网&nbsp;地址：陕西省西安市长安中路108号&nbsp; 邮编：710061</span>
+            <span class="pull-right"><a href="#">设为首页</a>|<a href="#">加入收藏</a>|<a href="homepage.html" target="_blank">学院首页</a>|<a href="#">管理登录</a></span></small>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

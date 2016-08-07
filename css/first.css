@@ -1,0 +1,148 @@
+a{color:#000;}
+/*顶部css设置*/
+.top{background: url("../images/top-logo.jpg");
+background-repeat: no-repeat; height:98px;}
+.top a{ color:#000;}
+.setHeight{height:35px;line-height: 35px;}
+
+.setHeight a{text-decoration: none;}
+
+/*导航css设置*/
+.setNav li{float:left;
+    margin-left: 50px;
+    height:46px;
+    line-height: 46px;}
+
+.setNav a{color:#fff;
+font-weight: bold;}
+
+.setNav a:hover{text-decoration: none;
+color:coral;}
+/*新闻轮播*/
+.contain{width:1138px;
+    height:409px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.contain img{width:1138px;}
+.contain ul{width:6828px;
+ position: absolute;
+top:0;
+left:-1138px;}
+.contain ul li{float:left;}
+.left{position:absolute;
+left:10%;
+top:50%;
+z-index:5;}
+
+.right{position:absolute;
+    right:10%;
+    top:50%;
+z-index:5;}
+
+.n-left{width: 114px;
+height:409px;
+    background:rgba(0,0,0,0.8);
+    position: absolute;
+z-index:2; }
+
+.n-right{width: 114px;
+    height:409px;
+    background:rgba(0,0,0,0.8);
+    position:absolute;
+    top:0;
+    right:0;
+z-index: 2;}
+/*主体*/
+.setBorder{border: 2px solid rgb(237,237,237);}
+
+.setBorder li{height: 30px;}
+
+.setBorder a{color:#000;
+    text-decoration: none;}
+
+.setBorder a:hover{color:darkred; }
+
+.setWidth a{width:128px;
+height: 40px;
+background:-webkit-linear-gradient(top,#ccc,#fff);
+    background:-moz-linear-gradient(top,#ccc,#fff);
+    background:-o-linear-gradient(top,#ccc,#fff);
+background:-ms-linear-gradient(top,#ccc,#fff);}
+
+#bgChange{background:rgb(151,0,19);
+color: #fff;}
+.main{ position: relative; }
+.main ul{
+    height: 375px;
+padding-top: 15px;
+padding-left: 20px;}
+
+.main li{height:34px;}
+
+.main a:hover{color:darkred;
+    text-decoration: none;}
+
+.cards{display: none;}
+
+.sideRight>a{width:146px;
+height: 53px;
+line-height: 43px;  }
+
+.sideRight>a:hover{background:rgb(151,0,19);
+color: #fff;}
+
+.setPage{ border: 1px solid darkred;
+    background:rgb(255,251,240);
+    -webkit-box-shadow:0 5px 0 rgb(151,0,19);
+    -moz-box-shadow:0 5px 0 rgb(151,0,19);
+    box-shadow:0 5px 0 rgb(151,0,19);
+display: none;}
+
+.setPage a{display:block;
+line-height: 23px;}
+
+.setPage a:hover{color: darkred;
+background: #fff;
+line-height: 25px;
+text-decoration: none;}
+
+.page1{width:120px;
+     height:53px;
+     position: absolute;
+     top:108px;
+     left:-107px;
+     z-index:3;
+ }
+
+.page2{width:120px;
+    height:118px;
+    position: absolute;
+    top:162px;
+    left:-107px;
+    z-index:3;
+}
+.page3{width:120px;
+    height:210px;
+    position: absolute;
+    top:216px;
+    left:-107px;
+    z-index:3;
+}
+.page4{width:120px;
+    height:54px;
+    position: absolute;
+    top:324px;
+    left:-107px;
+    z-index:3;
+}
+
+/*底部1*/
+.bt-1{
+line-height: 40px;
+}
+.bt{background: rgb(174,28,28);
+height:100px;
+color:#fff;
+padding-top: 15px;}

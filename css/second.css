@@ -1,0 +1,53 @@
+a{color:#000;  }
+.clearPadding{padding:0;}
+
+.setNav li{float:left;
+margin-left: 50px;
+height:46px;
+line-height: 46px;}
+.setLi{font-size: 12px;}
+
+
+.setLi li{height: 26px;
+border-bottom: 1px solid rgb(237,237,237);}
+
+.setNav a{color:#fff;
+    text-decoration: none;}
+
+.setLi a{color: #000;
+text-decoration: none;}
+
+.setLi a:hover{color: red;}
+
+.countBag{background: url("../images/dec_06.jpg");
+background-repeat:no-repeat;
+background-position:0 20px;
+padding:20px 25px;
+font-size: 12px;}
+
+.countBag li{height: 25px;
+    line-height: 25px;
+}
+
+.countBag a{color:#000;
+text-decoration: none;}
+
+
+.dec{background:-webkit-linear-gradient(top,#fff,#ccc);
+    background:-moz-linear-gradient(top,#fff,#ccc);
+    background:-o-linear-gradient(top,#fff,#ccc);
+    background:-ms-linear-gradient(top,#fff,#ccc);
+     font-weight:900;}
+
+
+#scrol{
+    position: absolute;
+    left:0;
+    top:10px;}
+
+#scrol li{float: left;
+    width:160px;
+    text-align:center;}
+
+.bt a{color: #fff;
+text-decoration: none;}

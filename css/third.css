@@ -1,0 +1,74 @@
+body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+a:link{color:#000;}
+
+/*顶部css设置*/
+.top{background: url("../images/top-logo.jpg");
+    background-repeat: no-repeat; height:98px;}
+.top a{ color:#000;}
+.setHeight{height:35px;line-height: 35px;}
+/*导航css设置*/
+.setNav li{float:left;
+    margin-left: 50px;
+    height:46px;
+    line-height: 46px;}
+
+.setNav a{color:#fff;
+    font-weight: bold;}
+
+.setNav a:hover{text-decoration: none;
+    color:coral;}
+/*主体*/
+.one{width:80%;
+height:70px;
+background:rgb(174,28,28);
+line-height: 70px;
+text-align: center;
+font-size: 24px;
+font-weight: 900;
+display: none;}
+
+.one a{color: #fff;}
+
+.one a:hover{color: #fff;
+text-decoration: none;}
+
+.two{padding:7px;
+    width: 80%;
+border:2px solid rgb(237,237,237);}
+
+.two li{width:160px;
+height: 40px;
+text-align: center;
+line-height: 40px;
+margin-bottom: 1px;
+background: rgb(234,234,234);}
+.two a{display: block;
+text-decoration: none;
+color: #000;}
+
+.two a:hover{background: rgb(102,102,102);
+
+color:#fff;}
+
+
+
+.setBorder{border: 1px solid rgb(237,237,237);}
+
+h3{font-weight: bold;
+text-align: center}
+
+.setBorder p{text-indent: 2em;
+line-height: 25px;
+font-size: 13px;}
+.leader{text-align: center;
+margin-bottom: 25px;}
+.leader img{width:70%;
+height: 180px;
+}
+.three{display:none;}
+/*底部*/
+.bt{background: rgb(174,28,28);
+    height:100px;
+    color:#fff;
+    padding-top: 15px;}

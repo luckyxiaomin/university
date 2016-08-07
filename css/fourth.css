@@ -1,0 +1,62 @@
+body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+a:link{color:#000;}
+
+/*顶部css设置*/
+.top{background: url("../images/top-logo.jpg");
+    background-repeat: no-repeat; height:98px;}
+.top a{ color:#000;}
+.setHeight{height:35px;line-height: 35px;}
+/*导航css设置*/
+.setNav li{float:left;
+    margin-left: 50px;
+    height:46px;
+    line-height: 46px;}
+
+.setNav a{color:#fff;
+    font-weight: bold;}
+
+.setNav a:hover{text-decoration: none;
+    color:coral;}
+
+/*主体*/
+.setBorder{border: 1px solid rgb(237,237,237);}
+
+.setHeight{height:35px;line-height: 35px;}
+.content{padding: 40px;  }
+
+.content div{
+width:28%;
+height:auto;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.content img{width:100%;
+    border:1px solid red;
+height: auto;}
+
+.content p{border:1px solid red;
+text-align: center;}
+
+.content a{display: block;
+opacity: 0.5;
+filter:alpha(opacity=50);
+}
+
+.content a:hover{transform: scale(1.1,1.1);
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+
+.main-bt{text-align: center;
+margin-bottom: 10px;}
+
+.main-bt a{color: #000;
+text-decoration: none;}
+/*底部*/
+.bt{background: rgb(174,28,28);
+    height:100px;
+    color:#fff;
+    padding-top: 15px;}
